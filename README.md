@@ -2,7 +2,7 @@
 
 A full-stack course selling application with user authentication, course management, and purchase functionality.
 
-## 🚀 **Project Overview**
+##  **Project Overview**
 
 This is a complete course selling platform that allows:
 - Users to browse, purchase, and view courses
@@ -10,7 +10,10 @@ This is a complete course selling platform that allows:
 - Secure authentication with JWT tokens
 - Modern, responsive UI with React and Tailwind CSS
 
-## 📁 **Project Structure**
+## Deployment Link:-
+
+
+##  **Project Structure**
 
 ```
 Course-selling-backend/
@@ -43,7 +46,7 @@ Course-selling-backend/
     └── tailwind.config.js       # Tailwind CSS configuration
 ```
 
-## 🛠️ **Technology Stack**
+##  **Technology Stack**
 
 ### **Backend**
 - **Node.js** - Runtime environment
@@ -62,7 +65,7 @@ Course-selling-backend/
 - **Tailwind CSS** - Styling framework
 - **Lucide React** - Icon library
 
-## 🚀 **Getting Started**
+##  **Getting Started**
 
 ### **Prerequisites**
 - Node.js (v14 or higher)
@@ -101,7 +104,7 @@ npm start
 ```
 The frontend will run on `http://localhost:3001`
 
-## 🔑 **Demo Accounts**
+##  **Demo Accounts**
 
 ### **Admin Account (Auto-created)**
 - **Email**: `admin@demo.com`
@@ -111,33 +114,33 @@ The frontend will run on `http://localhost:3001`
 - Visit `/signup` to create new user or admin accounts
 - Choose between User and Admin roles during signup
 
-## 📱 **Application Features**
+##  **Application Features**
 
 ### **User Features**
-- ✅ User registration and login
-- ✅ Browse available courses
-- ✅ View course details
-- ✅ Purchase courses
-- ✅ View purchased courses in dashboard
-- ✅ Track spending and course statistics
+-  User registration and login
+-  Browse available courses
+-  View course details
+-  Purchase courses
+-  View purchased courses in dashboard
+-  Track spending and course statistics
 
 ### **Admin Features**
-- ✅ Admin registration and login
-- ✅ Create new courses
-- ✅ Edit existing courses
-- ✅ View all courses
-- ✅ Track course statistics
-- ✅ Course management dashboard
+-  Admin registration and login
+-  Create new courses
+-  Edit existing courses
+-  View all courses
+-  Track course statistics
+-  Course management dashboard
 
 ### **General Features**
-- ✅ Responsive design (mobile & desktop)
-- ✅ JWT-based authentication
-- ✅ Role-based access control
-- ✅ Modern UI with Tailwind CSS
-- ✅ Error handling and loading states
-- ✅ Form validation
+-  Responsive design (mobile & desktop)
+-  JWT-based authentication
+-  Role-based access control
+-  Modern UI with Tailwind CSS
+-  Error handling and loading states
+-  Form validation
 
-## 🎯 **API Endpoints**
+##  **API Endpoints**
 
 ### **User Routes**
 - `POST /api/v1/user/signup` - Register new user
@@ -245,7 +248,7 @@ The application automatically seeds 8 demo courses on first startup:
 - Implement user profiles
 - Add course progress tracking
 
-## 🚀 **Deployment**
+##  **Deployment**
 
 ### **Backend Deployment**
 1. Set production environment variables
@@ -258,4 +261,3 @@ The application automatically seeds 8 demo courses on first startup:
 3. Configure API endpoint for production
 
 
-**Happy Learning! 🎓**
