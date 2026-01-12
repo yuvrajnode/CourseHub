@@ -257,18 +257,5 @@ The application automatically seeds 8 demo courses on first startup:
 2. Deploy build folder to static hosting (Netlify, Vercel, etc.)
 3. Configure API endpoint for production
 
-## 📞 **Support**
-
-For issues or questions:
-1. Check the console for error messages
-2. Verify MongoDB connection
-3. Ensure both servers are running
-4. Check environment variables configuration
-
-## 📄 **License**
-
-This project is for educational purposes. Feel free to use and modify for learning.
-
----
 
 **Happy Learning! 🎓**
