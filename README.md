@@ -12,7 +12,7 @@ This is a complete course selling platform that allows:
 
 ## Deployment Link:-
 
-https://course-hub-eta-kohl.vercel.app/login
+https://course-hub-six-mu.vercel.app/login
 
 ##  **Project Structure**
 
