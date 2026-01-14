@@ -37,6 +37,7 @@ export const adminAPI = {
   signin: (credentials) => api.post('/admin/signin', credentials),
   createCourse: (courseData) => api.post('/admin/course', courseData),
   updateCourse: (courseId, courseData) => api.put(`/admin/course/${courseId}`, courseData),
+  deleteCourse: (courseId) => api.delete(`/admin/course/${courseId}`),
   getAllCourses: () => api.get('/admin/course/bulk'),
 };
 

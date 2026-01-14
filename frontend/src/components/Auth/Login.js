@@ -28,21 +28,28 @@ const Login = () => {
     setError('');
 
     try {
+      console.log('Attempting login for:', formData.email);
+      console.log('Is user login:', isUserLogin);
+      
       if (isUserLogin) {
         const response = await userAPI.signin({
           email: formData.email,
           password: formData.password
         });
+        console.log('Login response:', response);
         login({ email: formData.email }, response.data.token);
       } else {
         const response = await adminAPI.signin({
           email: formData.email,
           password: formData.password
         });
+        console.log('Admin login response:', response);
         loginAdmin({ email: formData.email }, response.data.token);
       }
     } catch (err) {
-      setError(err.response?.data?.message || 'Login failed');
+      console.error('Login error:', err);
+      console.error('Error response:', err.response);
+      setError(err.response?.data?.message || err.response?.data?.error || 'Login failed');
     } finally {
       setLoading(false);
     }

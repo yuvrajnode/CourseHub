@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { adminAPI, userAPI } from '../../services/api';
 import { BookOpen, DollarSign, ShoppingCart, Star } from 'lucide-react';
 
@@ -7,11 +7,7 @@ const CourseList = () => {
   const [loading, setLoading] = useState(true);
   const [purchasing, setPurchasing] = useState(null);
 
-  useEffect(() => {
-    fetchCourses();
-  }, []);
-
-  const fetchCourses = async () => {
+  const fetchCourses = useCallback(async () => {
     try {
       const response = await adminAPI.getAllCourses();
       setCourses(response.data.courses || []);
@@ -20,7 +16,11 @@ const CourseList = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchCourses();
+  }, [fetchCourses]);
 
   const handlePurchase = async (courseId) => {
     setPurchasing(courseId);
@@ -87,6 +87,7 @@ const CourseList = () => {
                 </div>
 
                 <button
+                  type="button"
                   onClick={() => handlePurchase(course._id)}
                   disabled={purchasing === course._id}
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
