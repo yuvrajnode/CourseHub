@@ -17,22 +17,22 @@ https://course-hub-eta-kohl.vercel.app/login
 ##  **Project Structure**
 
 ```
-Course-selling-backend/
-├── course-selling-backend/          # Backend API Server
-│   ├── routes/                    # API Routes
-│   │   ├── user.js               # User authentication & purchases
-│   │   ├── admin.js              # Admin authentication & course management
-│   │   └── course.js             # Course purchasing
-│   ├── middleware/                # Authentication middleware
-│   │   ├── user.js               # User JWT verification
-│   │   └── admin.js             # Admin JWT verification
-│   ├── db.js                     # MongoDB schemas & models
-│   ├── seed.js                   # Demo course data seeding
-│   ├── index.js                  # Main server file
-│   ├── config.js                 # Environment configuration
-│   ├── .env                      # Environment variables
-│   └── package.json              # Backend dependencies
-└── frontend/                     # React Frontend
+Course-Hub/
+├── backend/                        # Backend API Server
+│   ├── routes/                     # API Routes
+│   │   ├── user.js                # User authentication & purchases
+│   │   ├── admin.js               # Admin authentication & course management
+│   │   └── course.js              # Course purchasing
+│   ├── middleware/                 # Authentication middleware
+│   │   ├── user.js                # User JWT verification
+│   │   └── admin.js              # Admin JWT verification
+│   ├── db.js                      # MongoDB schemas & models
+│   ├── seed.js                    # Demo course data seeding
+│   ├── index.js                   # Main server file
+│   ├── config.js                  # Environment configuration
+│   ├── .env                       # Environment variables
+│   └── package.json               # Backend dependencies
+└── frontend/                      # React Frontend
     ├── src/
     │   ├── components/
     │   │   ├── Auth/            # Login & Signup components
@@ -75,7 +75,7 @@ Course-selling-backend/
 
 ### **1. Clone and Setup Backend**
 ```bash
-cd course-selling-backend
+cd backend
 npm install
 ```
 

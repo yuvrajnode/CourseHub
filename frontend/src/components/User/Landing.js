@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { adminAPI } from '../../services/api';
 import { BookOpen, DollarSign, Star, Users, Clock, CheckCircle } from 'lucide-react';
 
@@ -6,11 +6,7 @@ const Landing = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchCourses();
-  }, []);
-
-  const fetchCourses = async () => {
+  const fetchCourses = useCallback(async () => {
     try {
       const response = await adminAPI.getAllCourses();
       setCourses(response.data.courses || []);
@@ -19,7 +15,11 @@ const Landing = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchCourses();
+  }, [fetchCourses]);
 
   const featuredCourses = courses.slice(0, 6);
 

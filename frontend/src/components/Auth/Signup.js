@@ -40,7 +40,7 @@ const Signup = () => {
         setTimeout(() => navigate('/login'), 2000);
       }
     } catch (err) {
-      setError(err.response?.data?.error || 'Signup failed');
+      setError(err.response?.data?.error || err.response?.data?.message || 'Signup failed');
     } finally {
       setLoading(false);
     }

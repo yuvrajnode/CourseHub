@@ -1,17 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { userAPI } from '../../services/api';
-import { BookOpen, DollarSign, Calendar, CheckCircle } from 'lucide-react';
+import { BookOpen, DollarSign, CheckCircle } from 'lucide-react';
 
 const Dashboard = () => {
   const [purchases, setPurchases] = useState([]);
   const [coursesData, setCoursesData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchPurchases();
-  }, []);
-
-  const fetchPurchases = async () => {
+  const fetchPurchases = useCallback(async () => {
     try {
       const response = await userAPI.getPurchases();
       setPurchases(response.data.purchases || []);
@@ -21,7 +17,11 @@ const Dashboard = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchPurchases();
+  }, [fetchPurchases]);
 
   if (loading) {
     return (
@@ -126,7 +126,7 @@ const Dashboard = () => {
                       <DollarSign className="h-4 w-4 text-green-600 mr-1" />
                       <span className="font-bold text-gray-900">${course.price}</span>
                     </div>
-                    <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm">
+                    <button type="button" className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm">
                       Start Learning
                     </button>
                   </div>
