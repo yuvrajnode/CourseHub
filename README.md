@@ -10,10 +10,7 @@ This is a complete course selling platform that allows:
 - Secure authentication with JWT tokens
 - Modern, responsive UI with React and Tailwind CSS
 
-## Deployment Link:-
-
-https://course-hub-six-mu.vercel.app/login
-
+**Live demo →** [course-hub-gamma.vercel.app](https://course-hub-gamma.vercel.app)
 ##  **Project Structure**
 
 ```
