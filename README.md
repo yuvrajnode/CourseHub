@@ -1,4 +1,4 @@
-# Course Selling Platform
+# CourseHub · Full-Stack Course Marketplace
 
 A full-stack course selling application with user authentication, course management, and purchase functionality.
 
